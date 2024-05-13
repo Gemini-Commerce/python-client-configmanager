@@ -1,21 +1,24 @@
 # configmanager.ConfigManagerApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://config-manager.api.gogemini.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**config_manager_bulk_set_configs**](ConfigManagerApi.md#config_manager_bulk_set_configs) | **POST** /configmanager.ConfigManager/BulkSetConfigs | 
-[**config_manager_get_config**](ConfigManagerApi.md#config_manager_get_config) | **POST** /configmanager.ConfigManager/GetConfig | 
+[**config_manager_bulk_set_configs**](ConfigManagerApi.md#config_manager_bulk_set_configs) | **POST** /configmanager.ConfigManager/BulkSetConfigs | BulkSetConfigs
+[**config_manager_get_config**](ConfigManagerApi.md#config_manager_get_config) | **POST** /configmanager.ConfigManager/GetConfig | GetConfig
 [**config_manager_get_tenant_id_by_code**](ConfigManagerApi.md#config_manager_get_tenant_id_by_code) | **POST** /configmanager.ConfigManager/GetTenantIdByCode | 
 
 
 # **config_manager_bulk_set_configs**
 > object config_manager_bulk_set_configs(body)
 
+BulkSetConfigs
 
+Bulk set configs
 
 ### Example
 
+* OAuth Authentication (standardAuthorization):
 
 ```python
 import time
@@ -25,12 +28,18 @@ from configmanager.models.configmanager_bulk_set_configs_request import Configma
 from configmanager.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://config-manager.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = configmanager.Configuration(
-    host = "http://localhost"
+    host = "https://config-manager.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with configmanager.ApiClient(configuration) as api_client:
@@ -39,6 +48,7 @@ with configmanager.ApiClient(configuration) as api_client:
     body = configmanager.ConfigmanagerBulkSetConfigsRequest() # ConfigmanagerBulkSetConfigsRequest | 
 
     try:
+        # BulkSetConfigs
         api_response = api_instance.config_manager_bulk_set_configs(body)
         print("The response of ConfigManagerApi->config_manager_bulk_set_configs:\n")
         pprint(api_response)
@@ -61,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[standardAuthorization](../README.md#standardAuthorization)
 
 ### HTTP request headers
 
@@ -80,10 +90,13 @@ No authorization required
 # **config_manager_get_config**
 > ConfigmanagerConfigResponse config_manager_get_config(body)
 
+GetConfig
 
+Get a config
 
 ### Example
 
+* OAuth Authentication (standardAuthorization):
 
 ```python
 import time
@@ -94,12 +107,18 @@ from configmanager.models.configmanager_get_config_request import ConfigmanagerG
 from configmanager.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://config-manager.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = configmanager.Configuration(
-    host = "http://localhost"
+    host = "https://config-manager.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with configmanager.ApiClient(configuration) as api_client:
@@ -108,6 +127,7 @@ with configmanager.ApiClient(configuration) as api_client:
     body = configmanager.ConfigmanagerGetConfigRequest() # ConfigmanagerGetConfigRequest | 
 
     try:
+        # GetConfig
         api_response = api_instance.config_manager_get_config(body)
         print("The response of ConfigManagerApi->config_manager_get_config:\n")
         pprint(api_response)
@@ -130,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[standardAuthorization](../README.md#standardAuthorization)
 
 ### HTTP request headers
 
@@ -153,6 +173,7 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
 import time
@@ -163,12 +184,22 @@ from configmanager.models.configmanager_get_tenant_id_by_code_response import Co
 from configmanager.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://config-manager.api.gogemini.io
 # See configuration.py for a list of all supported configuration parameters.
 configuration = configmanager.Configuration(
-    host = "http://localhost"
+    host = "https://config-manager.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with configmanager.ApiClient(configuration) as api_client:
@@ -199,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 

@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "configmanager"
 version = "1.0.0"
-description = "configmanager/service.proto"
-authors = ["OpenAPI Generator Community <team@openapitools.org>"]
-license = "NoLicense"
+description = "Config Manager Service"
+authors = ["Gemini Team <info@gemini-commerce.com>"]
+license = "Gemini fair use license"
 readme = "README.md"
 repository = "https://github.com/Gemini-Commerce/python-client-configmanager"
-keywords = ["OpenAPI", "OpenAPI-Generator", "configmanager/service.proto"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "Config Manager Service"]
 include = ["configmanager/py.typed"]
 
 [tool.poetry.dependencies]
