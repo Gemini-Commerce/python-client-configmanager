@@ -21,8 +21,6 @@ Bulk set configs
 * OAuth Authentication (standardAuthorization):
 
 ```python
-import time
-import os
 import configmanager
 from configmanager.models.configmanager_bulk_set_configs_request import ConfigmanagerBulkSetConfigsRequest
 from configmanager.rest import ApiException
@@ -99,8 +97,6 @@ Get a config
 * OAuth Authentication (standardAuthorization):
 
 ```python
-import time
-import os
 import configmanager
 from configmanager.models.configmanager_config_response import ConfigmanagerConfigResponse
 from configmanager.models.configmanager_get_config_request import ConfigmanagerGetConfigRequest
@@ -176,8 +172,6 @@ Name | Type | Description  | Notes
 * Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import configmanager
 from configmanager.models.configmanager_get_tenant_id_by_code_request import ConfigmanagerGetTenantIdByCodeRequest
 from configmanager.models.configmanager_get_tenant_id_by_code_response import ConfigmanagerGetTenantIdByCodeResponse

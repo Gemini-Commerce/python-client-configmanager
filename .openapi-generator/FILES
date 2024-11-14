@@ -37,13 +37,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_bulk_set_configs_request_config.py
-test/test_config_manager_api.py
-test/test_configmanager_bulk_set_configs_request.py
-test/test_configmanager_config_response.py
-test/test_configmanager_get_config_request.py
-test/test_configmanager_get_tenant_id_by_code_request.py
-test/test_configmanager_get_tenant_id_by_code_response.py
-test/test_protobuf_any.py
-test/test_rpc_status.py
 tox.ini
